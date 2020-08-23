@@ -1,7 +1,13 @@
 import "bootstrap/dist/css/bootstrap.css";
+import buildClient from "../api/build_client";
 
-const myApp = ({ Component, pageProps }) => {
-	return <Component {...pageProps} />;
+const AppComponent = ({ Component, pageProps }) => {
+	return (
+		<div>
+			<h1>Header</h1>
+			<Component {...pageProps} />
+		</div>
+	);
 };
 
-export default myApp;
+export default AppComponent;
