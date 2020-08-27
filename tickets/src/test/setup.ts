@@ -1,7 +1,5 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
-import request from "supertest";
 import mongoose from "mongoose";
-import { app } from "../app";
 import jwt from "jsonwebtoken";
 
 declare global {
@@ -11,7 +9,7 @@ declare global {
 		}
 	}
 }
-jest.setTimeout(60000);
+
 let mongo: any;
 beforeAll(async () => {
 	process.env.JWT_KEY = "asdfasdf";
